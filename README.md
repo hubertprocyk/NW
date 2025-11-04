@@ -12,9 +12,7 @@ Użycie:
 node ./nw.js sekwencje.fasta
 ```
 
-Podany plik powinien zawierać obie dopasowywane sekwencje. Program analizuje dwie pierwsze sekwencje i ignoruje resztę.
-
-Przykładowy plik:
+Podany plik powinien zawierać obie dopasowywane sekwencje. Program analizuje dwie pierwsze sekwencje i ignoruje resztę. Przykładowy plik:
 
 ```
 >sekwencja 1
@@ -23,7 +21,7 @@ GTCGACGCATTC
 GTCGCACGCAT
 ```
 
-Punktacja dla dopasowań, różnic i przerw jest przechowywana w obiekcie `scores` na początku pliku i można ją dowolnie modyfikować:
+Punktacja dla dopasowań, różnic i przerw jest przechowywana w obiekcie `scores` na początku skryptu i można ją dowolnie modyfikować:
 
 ```js
 const scores = {
