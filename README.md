@@ -1,7 +1,3 @@
-## Projekt bioinformatyka strukturalna
-
-Hubert Procyk (155645), Aleksander Okupnik (159867), Mateusz Przybysławski
-
 ## Algorytm Needlemana-Wunsch'a
 
 Użycie:
