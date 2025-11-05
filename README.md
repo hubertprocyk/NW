@@ -1,10 +1,8 @@
-# Projekt bioinformatyka strukturalna
+## Projekt bioinformatyka strukturalna
 
-### Hubert Procyk, Aleksander Okupnik, Mateusz Przybysławski
+Hubert Procyk (155645), Aleksander Okupnik (159867), Mateusz Przybysławski
 
-### 155645, 159867
-
-# Algorytm Needlemana-Wunsch'a
+## Algorytm Needlemana-Wunsch'a
 
 Użycie:
 
@@ -12,7 +10,10 @@ Użycie:
 node ./nw.js sekwencje.fasta
 ```
 
-Podany plik powinien zawierać obie dopasowywane sekwencje. Program analizuje dwie pierwsze sekwencje i ignoruje resztę. Przykładowy plik:
+> [!IMPORTANT]
+> Do uruchomienia skryptu potrzebna jest nowoczesna instalacja NodeJS
+
+Podany plik powinien zawierać obie dopasowywane sekwencje. Program analizuje dwie pierwsze sekwencje i ignoruje resztę. Przykładowy plik wejściowy:
 
 ```
 >sekwencja 1
@@ -31,7 +32,7 @@ const scores = {
 };
 ```
 
-Wyniki zapisywane są do pliku alignment.txt. Wynik dla przykładowego pliku wygląda tak:
+Wyniki zapisywane są do pliku `alignment.txt`. Wynik dla przykładowego pliku wygląda tak:
 
 ```
 Dopasowanie sekwencja 1 i sekwencja 2:
