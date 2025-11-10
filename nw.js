@@ -29,7 +29,10 @@ const [seq1, seq2] = file
 // create matrix
 const rows = seq1.dna.length;
 const columns = seq2.dna.length;
-const matrix = Array.from({ length: rows }, () => Array(columns).fill(0));
+// const matrix = Array.from({ length: rows }, () => Array(columns).fill(0));
+const matrix = Int16Array.from({ length: rows }, () =>
+  new Int16Array(columns).fill(0)
+);
 const printMatrix = (arr) => arr.forEach((row) => console.log(row.join("\t")));
 
 // pre-fill matrix
@@ -61,6 +64,22 @@ let seq2text = "";
 let row = rows - 1;
 let column = columns - 1;
 while (row != 0 || column != 0) {
+  // Border moves
+  if (row === 0) {
+    // must come from left
+    seq1text += "_";
+    seq2text += seq2.dna[column];
+    column -= 1;
+    continue;
+  }
+  if (column === 0) {
+    // must come from up
+    seq1text += seq1.dna[row];
+    seq2text += "_";
+    row -= 1;
+    continue;
+  }
+
   const diag =
     matrix[row - 1][column - 1] +
     (seq1.dna[row] === seq2.dna[column] ? scores.match : scores.mismatch);
